@@ -1,0 +1,14 @@
+
+<div class="container">
+  <h1><%= @article.title %></h1>
+  <%= link_to "✏️", edit_article_path %>
+  <%= link_to "🗑️", article_path(@article.id), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+</div>
+
+<hr>
+
+<div class="container">
+  <p><%= @article.content %></p>
+</div>
+
+<%= link_to "<- Back", articles_path %>
